@@ -2,9 +2,9 @@
 
 > Sharable ESLint config for unjs repositories. (WIP)
 
-Based on [prettier](https://prettier.io/), [standard](https://standardjs.com/) and [unicorn/recommended](https://github.com/sindresorhus/eslint-plugin-unicorn)
+Based on [standard](https://standardjs.com), [unicorn/recommended](https://github.com/sindresorhus/eslint-plugin-unicorn) and [Typescript ESLint](https://typescript-eslint.io).
 
-Notes about code style: https://github.com/unjs/eslint-config/discussions/3
+**Note:** Prettier defaults is recommended for formatting. This config enforces no styling rules. See https://github.com/unjs/eslint-config/discussions/3 for more information.
 
 ## License
 
