@@ -5,6 +5,8 @@ module.exports = {
     'prettier',
     'standard',
     'plugin:unicorn/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:import/errors',
     'plugin:import/warnings'
   ],
