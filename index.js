@@ -27,10 +27,20 @@ module.exports = {
     "space-before-function-paren": 0,
     "arrow-parens": 0,
     "comma-dangle": 0,
-    "unicorn/prevent-abbreviations": 0,
     "keyword-spacing": 0,
     "no-multiple-empty-lines": 0,
     "no-trailing-spaces": 0,
+
+    // Disable some unnecessary or conflicting rules
+    "no-use-before-define": "off",
+    "unicorn/prevent-abbreviations": 0,
+    "unicorn/no-await-expression-member": 0,
+    "unicorn/no-useless-undefined": 0,
+    "unicorn/no-array-push-push": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
 
     // Enforce import order
     'import/order': 'error',
