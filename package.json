@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "lint": "eslint . && prettier -c *.js",
-    "release": "pnpm run test && changelogen --release && npm publish",
+    "release": "pnpm run test && changelogen --release && npm publish && git push --follow-tags",
     "test": "pnpm run lint"
   },
   "dependencies": {
