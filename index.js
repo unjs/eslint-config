@@ -34,6 +34,18 @@ module.exports = {
     "unicorn/number-literal-case": 0,
     "unicorn/template-indent": 0,
     "generator-star-spacing": 0,
+    "space-infix-ops": 0,
+    "comma-spacing": 0,
+    "brace-style": 0,
+    "space-in-parens": 0,
+    "space-before-blocks": 0,
+    "semi-spacing": 0,
+    "object-property-newline": 0,
+    "no-multi-spaces": 0,
+    "key-spacing": 0,
+    "eol-last": 0,
+    "func-call-spacing": 0,
+    "comma-style": 0,
 
     // Disable some unnecessary or conflicting rules
     "no-use-before-define": "off",
