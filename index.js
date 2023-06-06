@@ -58,6 +58,7 @@ module.exports = {
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/ban-ts-comment": 0,
     "@typescript-eslint/no-empty-interface": 0,
+    "unicorn/prefer-string-replace-all": 0,
 
     // Enforce import order
     "import/order": "error",
