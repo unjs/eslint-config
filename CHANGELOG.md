@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v0.2.1
+
+[compare changes](https://undefined/undefined/compare/v0.2.0...v0.2.1)
+
+
+### 🏡 Chore
+
+  - Disable `prefer-string-replace-all` by default (87334a9)
+  - Update dependencies (05165d0)
+
+### ❤️  Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.2.0
 
 [compare changes](https://undefined/undefined/compare/v0.1.0...v0.2.0)
