@@ -25,6 +25,7 @@ export default function unjsPreset(
     "@typescript-eslint/ban-ts-comment": 0,
     "@typescript-eslint/no-empty-interface": 0,
     "unicorn/prefer-string-replace-all": 0,
+    "unicorn/no-abusive-eslint-disable": 0,
   };
 
   const configs: Linter.FlatConfig[] = [
