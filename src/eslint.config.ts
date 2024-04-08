@@ -1,16 +1,17 @@
 // @ts-ignore
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import type { Linter } from 'eslint';
-import type { RuleOptions } from './types.gen'
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
+import type { Linter } from "eslint";
+import type { RuleOptions } from "./types.gen";
 
-export interface PresetOptions {
-  rules?: RuleOptions
+export interface CustomConfig extends Omit<Linter.FlatConfig, "rules"> {
+  rules?: RuleOptions;
 }
 
-export default function unjsPreset(customConfig: PresetOptions = {}): Linter.FlatConfig[] {
-  /** @type RuleOptions */
+export default function unjsPreset(
+  ...userConfigs: CustomConfig[]
+): Linter.FlatConfig[] {
   const rules: RuleOptions = {
     "unicorn/number-literal-case": 0,
     "unicorn/template-indent": 0,
@@ -24,15 +25,21 @@ export default function unjsPreset(customConfig: PresetOptions = {}): Linter.Fla
     "@typescript-eslint/ban-ts-comment": 0,
     "@typescript-eslint/no-empty-interface": 0,
     "unicorn/prefer-string-replace-all": 0,
-    ...customConfig.rules
-  }
+  };
 
   const configs: Linter.FlatConfig[] = [
+    // https://eslint.org/docs/latest/rules/
     eslint.configs.recommended,
-    ...tseslint.configs.recommended as Linter.FlatConfig[],
-    eslintPluginUnicorn.configs['flat/recommended'] as Linter.FlatConfig,
-    { rules: rules as Linter.RulesRecord }
+    // https://typescript-eslint.io/
+    ...(tseslint.configs.recommended as Linter.FlatConfig[]),
+    // https://github.com/sindresorhus/eslint-plugin-unicorn
+    eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
+    // Preset overides
+    { rules: rules as Linter.RulesRecord },
+    { ignores: ["dist"] },
+    // User overrides
+    ...(userConfigs as Linter.FlatConfig[]),
   ];
 
-  return configs
+  return configs;
 }

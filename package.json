@@ -17,7 +17,8 @@
   "scripts": {
     "build": "unbuild",
     "dev": "eslint-config-inspector",
-    "lint": "eslint . && prettier -c *.js",
+    "lint": "eslint . && prettier -c src",
+    "lint:fix": "eslint . --fix && prettier -w src",
     "prepack": "pnpm build",
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
     "prerelease": "pnpm test && changelogen --release --prerelease && npm publish --tag rc && git push --follow-tags",

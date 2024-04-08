@@ -22,14 +22,15 @@ npx nypm install -D eslint typescript eslint-config-unjs
 Create `eslint.config.mjs` in your project root:
 
 ```js
-import unjs from 'eslint-config-unjs'
+import unjs from "eslint-config-unjs";
 
-export default unjs({
-  rules: {}
-})
+export default unjs({ ignores: [] }, { rules: {} });
 ```
 
-Types for `rules` are auto generated using [`antfu/eslint-typegen`](https://github.com/antfu/eslint-typegen).
+**Tips:**
+
+- You can pass any number of flat configs to unjs preset wrapper
+- Types for `rules` are auto generated using [`antfu/eslint-typegen`](https://github.com/antfu/eslint-typegen).
 
 ## License
 
