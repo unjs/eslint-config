@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.3.0-rc.1
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.2.1...v0.3.0-rc.1)
+
+### 💅 Refactors
+
+- ⚠️  Rewrite with flat config ([#10](https://github.com/unjs/eslint-config/pull/10))
+- Small updates ([0f44799](https://github.com/unjs/eslint-config/commit/0f44799))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Rewrite with flat config ([#10](https://github.com/unjs/eslint-config/pull/10))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.2.1
 
 [compare changes](https://undefined/undefined/compare/v0.2.0...v0.2.1)
