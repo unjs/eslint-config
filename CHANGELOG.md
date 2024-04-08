@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.3.0-rc.2
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.1...v0.3.0-rc.2)
+
+### 🩹 Fixes
+
+- Disable `unicorn/no-abusive-eslint-disable` ([a774033](https://github.com/unjs/eslint-config/commit/a774033))
+- Add coverage to default ignores ([fed58e9](https://github.com/unjs/eslint-config/commit/fed58e9))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.0-rc.1
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.2.1...v0.3.0-rc.1)
