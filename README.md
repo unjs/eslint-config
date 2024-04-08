@@ -29,6 +29,8 @@ export default unjs({
 })
 ```
 
+Types for `rules` are auto generated using [`antfu/eslint-typegen`](https://github.com/antfu/eslint-typegen).
+
 ## License
 
 MIT
