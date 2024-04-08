@@ -1,8 +1,8 @@
-# ✅ `eslint-config-unjs`
+# `eslint-config-unjs`
 
 Sharable ESLint config preset for usage across unjs repositories.
 
-Based on:
+✅ Based on:
 
 - [eslint recommended](https://eslint.org/docs/latest/rules/)
 - [typescript-eslint](https://typescript-eslint.io/)
