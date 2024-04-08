@@ -37,7 +37,7 @@ export default function unjsPreset(
     eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
     // Preset overides
     { rules: rules as Linter.RulesRecord },
-    { ignores: ["dist"] },
+    { ignores: ["dist", "coverage"] },
     // User overrides
     ...(userConfigs as Linter.FlatConfig[]),
   ];
