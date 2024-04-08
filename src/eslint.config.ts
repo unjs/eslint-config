@@ -1,7 +1,9 @@
-// @ts-ignore
-import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
+// @ts-ignore
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
+// @ts-ignore
+import markdown from "eslint-plugin-markdown";
 import type { Linter } from "eslint";
 import type { RuleOptions } from "./types.gen";
 
@@ -35,6 +37,18 @@ export default function unjsPreset(
     ...(tseslint.configs.recommended as Linter.FlatConfig[]),
     // https://github.com/sindresorhus/eslint-plugin-unicorn
     eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
+    // https://www.npmjs.com/package/eslint-plugin-markdown
+    { plugins: { markdown } },
+    { files: ["*.md"], processor: "markdown/markdown" },
+    {
+      files: ["**/*.md/*.js", "**/*.md/*.ts"],
+      rules: (<RuleOptions>{
+        "unicorn/filename-case": 0,
+        "no-undef": 0,
+        "no-unused-expressions": 0,
+        "padded-blocks": 0,
+      }) as any,
+    },
     // Preset overides
     { rules: rules as Linter.RulesRecord },
     { ignores: ["dist", "coverage"] },

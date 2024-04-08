@@ -2,11 +2,12 @@
 
 Sharable ESLint config preset for usage across unjs repositories.
 
-✅ Based on:
+✅ Includes:
 
-- [eslint recommended](https://eslint.org/docs/latest/rules/)
-- [typescript-eslint](https://typescript-eslint.io/)
-- [eslint-plugin-uniciorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [eslint recommended rules](https://eslint.org/docs/latest/rules/)
+- [uniciorn rules ](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [typescript-eslint integration](https://typescript-eslint.io/)
+- [markdown plugin](https://www.npmjs.com/package/eslint-plugin-markdown)
 
 ## Getting started
 
