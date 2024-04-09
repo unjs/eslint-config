@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.0-rc.4
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.3...v0.3.0-rc.4)
+
+### 🩹 Fixes
+
+- Disable no-unused-vars for markdown ([41ceabb](https://github.com/unjs/eslint-config/commit/41ceabb))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.0-rc.3
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.2...v0.3.0-rc.3)
