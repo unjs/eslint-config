@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.3.0-rc.3
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.2...v0.3.0-rc.3)
+
+### 🚀 Enhancements
+
+- Add markdown plugin ([2ee2662](https://github.com/unjs/eslint-config/commit/2ee2662))
+
+### 🩹 Fixes
+
+- Disable `unicorn/import-style` by default ([c8f91b0](https://github.com/unjs/eslint-config/commit/c8f91b0))
+
+### 🏡 Chore
+
+- Remove gen file ([70b152f](https://github.com/unjs/eslint-config/commit/70b152f))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.0-rc.2
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.1...v0.3.0-rc.2)
