@@ -29,6 +29,7 @@ export default function unjsPreset(
     "unicorn/prefer-string-replace-all": 0,
     "unicorn/no-abusive-eslint-disable": 0,
     "unicorn/import-style": 0,
+    "unicorn/prefer-module": 0,
   };
 
   const configs: Linter.FlatConfig[] = [
