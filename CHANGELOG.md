@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.0-rc.5
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.4...v0.3.0-rc.5)
+
+### 🏡 Chore
+
+- Disable prefer-module rule ([2b8046c](https://github.com/unjs/eslint-config/commit/2b8046c))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.0-rc.4
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.3...v0.3.0-rc.4)
