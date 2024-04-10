@@ -14,6 +14,9 @@ dependencies:
   eslint-plugin-unicorn:
     specifier: ^52.0.0
     version: 52.0.0(eslint@9.0.0)
+  globals:
+    specifier: ^15.0.0
+    version: 15.0.0
   typescript-eslint:
     specifier: ^7.5.0
     version: 7.5.0(eslint@9.0.0)(typescript@5.4.4)
@@ -2371,6 +2374,11 @@ packages:
   /globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
+
+  /globals@15.0.0:
+    resolution: {integrity: sha512-m/C/yR4mjO6pXDTm9/R/SpYTAIyaUB4EOzcaaMEl7mds7Mshct9GfejiJNQGjHHbdMPey13Kpu4TMbYi9ex1pw==}
+    engines: {node: '>=18'}
+    dev: false
 
   /globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}

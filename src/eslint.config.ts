@@ -6,6 +6,7 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import markdown from "eslint-plugin-markdown";
 import type { Linter } from "eslint";
 import type { RuleOptions } from "./types.gen";
+import globals from "globals";
 
 export interface CustomConfig extends Omit<Linter.FlatConfig, "rules"> {
   rules?: RuleOptions;
@@ -55,6 +56,18 @@ export default function unjsPreset(
     },
     // Preset overides
     { rules: rules as Linter.RulesRecord },
+    {
+      languageOptions: {
+        globals: Object.fromEntries(
+          Object.keys(globals).flatMap((group) =>
+            Object.keys(globals[group as keyof typeof globals]).map((k) => [
+              k,
+              true,
+            ]),
+          ),
+        ),
+      },
+    },
     { ignores: ["dist", "coverage"] },
     // User overrides
     ...(userConfigs as Linter.FlatConfig[]),
