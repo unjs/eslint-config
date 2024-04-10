@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-unjs",
-  "version": "0.3.0-rc.5",
+  "version": "0.3.0-rc.6",
   "description": "ESLint config for unjs projects",
   "repository": "unjs/eslint-config",
   "license": "MIT",

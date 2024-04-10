@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.3.0-rc.6
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.5...v0.3.0-rc.6)
+
+### 🩹 Fixes
+
+- Disable `unicorn/consistent-function-scoping` by default ([e45708c](https://github.com/unjs/eslint-config/commit/e45708c))
+- Make all globals available by default ([21946d0](https://github.com/unjs/eslint-config/commit/21946d0))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.0-rc.5
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.4...v0.3.0-rc.5)
