@@ -8,12 +8,19 @@ import type { Linter } from "eslint";
 import type { RuleOptions } from "./types.gen";
 import globals from "globals";
 
-export interface CustomConfig extends Omit<Linter.FlatConfig, "rules"> {
+export interface MainConfig {
+  rules?: RuleOptions;
+  markdown?: false | { rules: RuleOptions };
+  ignores?: string[];
+}
+
+export interface TypedFlatConfig extends Omit<Linter.FlatConfig, "rules"> {
   rules?: RuleOptions;
 }
 
 export default function unjsPreset(
-  ...userConfigs: CustomConfig[]
+  config: MainConfig = {},
+  ...userConfigs: TypedFlatConfig[]
 ): Linter.FlatConfig[] {
   const rules: RuleOptions = {
     "unicorn/number-literal-case": 0,
@@ -32,6 +39,7 @@ export default function unjsPreset(
     "unicorn/import-style": 0,
     "unicorn/prefer-module": 0,
     "unicorn/consistent-function-scoping": 0,
+    ...config.rules,
   };
 
   const configs: Linter.FlatConfig[] = [
@@ -42,9 +50,12 @@ export default function unjsPreset(
     // https://github.com/sindresorhus/eslint-plugin-unicorn
     eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
     // https://www.npmjs.com/package/eslint-plugin-markdown
-    { plugins: { markdown } },
-    { files: ["*.md"], processor: "markdown/markdown" },
-    {
+    config.markdown !== false && { plugins: { markdown } },
+    config.markdown !== false && {
+      files: ["*.md"],
+      processor: "markdown/markdown",
+    },
+    config.markdown !== false && {
       files: ["**/*.md/*.js", "**/*.md/*.ts"],
       rules: (<RuleOptions>{
         "unicorn/filename-case": 0,
@@ -53,9 +64,10 @@ export default function unjsPreset(
         "padded-blocks": 0,
         "@typescript-eslint/no-unused-vars": 0,
         "no-empty-pattern": 0,
+        ...config.markdown?.rules,
       }) as any,
     },
-    // Preset overides
+    // Preset overrides
     { rules: rules as Linter.RulesRecord },
     {
       languageOptions: {
@@ -69,10 +81,10 @@ export default function unjsPreset(
         ),
       },
     },
-    { ignores: ["dist", "coverage"] },
+    { ignores: ["dist", "coverage", ...(config.ignores || [])] },
     // User overrides
     ...(userConfigs as Linter.FlatConfig[]),
-  ];
+  ].filter(Boolean) as Linter.FlatConfig[];
 
   return configs;
 }

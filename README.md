@@ -25,7 +25,11 @@ Create `eslint.config.mjs` in your project root:
 ```js
 import unjs from "eslint-config-unjs";
 
-export default unjs({ ignores: [] }, { rules: {} });
+export default unjs({
+  ignores: [],
+  rules: {},
+  markdown: { rules: {} },
+});
 ```
 
 **Tips:**
