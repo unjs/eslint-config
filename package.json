@@ -26,28 +26,29 @@
     "typegen": "node ./scripts/typegen.mjs"
   },
   "dependencies": {
-    "@eslint/js": "^9.0.0",
+    "@eslint/js": "^9.1.1",
     "eslint-plugin-markdown": "^4.0.1",
     "eslint-plugin-unicorn": "^52.0.0",
-    "globals": "^15.0.0",
-    "typescript-eslint": "^7.5.0"
+    "globals": "^15.1.0",
+    "typescript-eslint": "^7.7.1"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^0.4.1",
-    "@types/eslint": "^8.56.7",
+    "@eslint/config-inspector": "^0.4.7",
+    "@types/eslint": "^8.56.10",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.12.5",
+    "@types/node": "^20.12.7",
     "automd": "^0.3.7",
     "changelogen": "^0.5.5",
-    "eslint": "^9.0.0",
-    "eslint-typegen": "^0.2.0",
+    "eslint": "^9.1.1",
+    "eslint-typegen": "^0.2.4",
     "jiti": "^1.21.0",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "unbuild": "^2.0.0"
   },
   "peerDependencies": {
     "eslint": "*",
     "typescript": "*"
-  }
+  },
+  "packageManager": "pnpm@9.0.6"
 }
