@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.3.0-rc.7
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.6...v0.3.0-rc.7)
+
+### 🚀 Enhancements
+
+- Allow easier main config ([5bb9c7a](https://github.com/unjs/eslint-config/commit/5bb9c7a))
+
+### 🩹 Fixes
+
+- Disable `no-empty-pattern` for markdown ([a988fae](https://github.com/unjs/eslint-config/commit/a988fae))
+
+### 🏡 Chore
+
+- Add renovate.json ([ec508c1](https://github.com/unjs/eslint-config/commit/ec508c1))
+- Update deps ([c624cd9](https://github.com/unjs/eslint-config/commit/c624cd9))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.0-rc.6
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.5...v0.3.0-rc.6)
