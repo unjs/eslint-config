@@ -52,6 +52,7 @@ export default function unjsPreset(
         "no-unused-expressions": 0,
         "padded-blocks": 0,
         "@typescript-eslint/no-unused-vars": 0,
+        "no-empty-pattern": 0,
       }) as any,
     },
     // Preset overides
