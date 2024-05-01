@@ -34,6 +34,10 @@ export default function unjsPreset(
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/ban-ts-comment": 0,
     "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
+    ],
     "unicorn/prefer-string-replace-all": 0,
     "unicorn/no-abusive-eslint-disable": 0,
     "unicorn/import-style": 0,
