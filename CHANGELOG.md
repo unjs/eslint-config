@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.3.0-rc.8
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.7...v0.3.0-rc.8)
+
+### 🚀 Enhancements
+
+- Configure rule`@typescript-eslint/no-unused-vars` to ignore vars starting with `_` ([#15](https://github.com/unjs/eslint-config/pull/15))
+
+### 🏡 Chore
+
+- Update readme example ([790fd8c](https://github.com/unjs/eslint-config/commit/790fd8c))
+- Update deps ([2192a5a](https://github.com/unjs/eslint-config/commit/2192a5a))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+- Yaroslav Lapin ([@JLarky](http://github.com/JLarky))
+
 ## v0.3.0-rc.7
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.6...v0.3.0-rc.7)
