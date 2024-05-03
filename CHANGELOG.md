@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0...v0.3.1)
+
+### 🩹 Fixes
+
+- **markdown:** Override default rules ([4765dd5](https://github.com/unjs/eslint-config/commit/4765dd5))
+
+### 🏡 Chore
+
+- Remove prerelease script (pnpm why ?!) ([a98c465](https://github.com/unjs/eslint-config/commit/a98c465))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.0
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.8...v0.3.0)
