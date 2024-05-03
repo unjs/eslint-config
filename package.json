@@ -21,7 +21,6 @@
     "lint:fix": "eslint . --fix && prettier -w src",
     "prepack": "pnpm build",
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
-    "prerelease": "pnpm test && changelogen --release --prerelease && npm publish --tag rc && git push --follow-tags",
     "test": "pnpm lint",
     "typegen": "node ./scripts/typegen.mjs"
   },
