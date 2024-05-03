@@ -53,24 +53,7 @@ export default function unjsPreset(
     ...(tseslint.configs.recommended as Linter.FlatConfig[]),
     // https://github.com/sindresorhus/eslint-plugin-unicorn
     eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
-    // https://www.npmjs.com/package/eslint-plugin-markdown
-    config.markdown !== false && { plugins: { markdown } },
-    config.markdown !== false && {
-      files: ["*.md"],
-      processor: "markdown/markdown",
-    },
-    config.markdown !== false && {
-      files: ["**/*.md/*.js", "**/*.md/*.ts"],
-      rules: (<RuleOptions>{
-        "unicorn/filename-case": 0,
-        "no-undef": 0,
-        "no-unused-expressions": 0,
-        "padded-blocks": 0,
-        "@typescript-eslint/no-unused-vars": 0,
-        "no-empty-pattern": 0,
-        ...config.markdown?.rules,
-      }) as any,
-    },
+
     // Preset overrides
     { rules: rules as Linter.RulesRecord },
     {
@@ -86,6 +69,29 @@ export default function unjsPreset(
       },
     },
     { ignores: ["dist", "coverage", ...(config.ignores || [])] },
+
+    // Markdown
+    // https://www.npmjs.com/package/eslint-plugin-markdown
+    config.markdown !== false && { plugins: { markdown } },
+    config.markdown !== false && {
+      files: ["*.md"],
+      processor: "markdown/markdown",
+    },
+    config.markdown !== false && {
+      files: ["**/*.md/*.js", "**/*.md/*.ts"],
+      rules: (<RuleOptions>{
+        "unicorn/filename-case": 0,
+        "no-undef": 0,
+        "no-unused-expressions": 0,
+        "padded-blocks": 0,
+        "@typescript-eslint/no-unused-vars": 0,
+        "no-empty-pattern": 0,
+        "no-redeclare": 0,
+        "no-import-assign": 0,
+        ...config.markdown?.rules,
+      }) as any,
+    },
+
     // User overrides
     ...(userConfigs as Linter.FlatConfig[]),
   ].filter(Boolean) as Linter.FlatConfig[];
