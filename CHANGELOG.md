@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.3.0
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.8...v0.3.0)
+
 ## v0.3.0-rc.8
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0-rc.7...v0.3.0-rc.8)
