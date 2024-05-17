@@ -25,20 +25,20 @@
     "typegen": "node ./scripts/typegen.mjs"
   },
   "dependencies": {
-    "@eslint/js": "^9.1.1",
+    "@eslint/js": "^9.3.0",
     "eslint-plugin-markdown": "^5.0.0",
     "eslint-plugin-unicorn": "^52.0.0",
-    "globals": "^15.1.0",
-    "typescript-eslint": "^7.8.0"
+    "globals": "^15.2.0",
+    "typescript-eslint": "^7.9.0"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.4.8",
     "@types/eslint": "^8.56.10",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.12",
     "automd": "^0.3.7",
     "changelogen": "^0.5.5",
-    "eslint": "^9.1.1",
+    "eslint": "^9.3.0",
     "eslint-typegen": "^0.2.4",
     "jiti": "^1.21.0",
     "prettier": "^3.2.5",
@@ -49,5 +49,5 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "packageManager": "pnpm@9.0.6"
+  "packageManager": "pnpm@9.1.1"
 }
