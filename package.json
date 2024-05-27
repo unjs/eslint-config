@@ -28,8 +28,8 @@
     "@eslint/js": "^9.3.0",
     "eslint-plugin-markdown": "^5.0.0",
     "eslint-plugin-unicorn": "^52.0.0",
-    "globals": "^15.2.0",
-    "typescript-eslint": "^7.9.0"
+    "globals": "^15.3.0",
+    "typescript-eslint": "^7.11.0"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.4.8",
@@ -49,5 +49,5 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "packageManager": "pnpm@9.1.1"
+  "packageManager": "pnpm@9.1.3"
 }
