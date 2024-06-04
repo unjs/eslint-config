@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.2
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.1...v0.3.2)
+
+### 🏡 Chore
+
+- Update unicorn plugin to 53 ([0a944e4](https://github.com/unjs/eslint-config/commit/0a944e4))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.1
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.0...v0.3.1)
