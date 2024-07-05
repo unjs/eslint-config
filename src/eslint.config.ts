@@ -68,7 +68,7 @@ export default function unjsPreset(
         ),
       },
     },
-    { ignores: ["dist", "coverage", ...(config.ignores || [])] },
+    { ignores: ["dist", "coverage", "node_modules", ...(config.ignores || [])] },
 
     // Markdown
     // https://www.npmjs.com/package/eslint-plugin-markdown
