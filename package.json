@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.2",
-    "@types/eslint": "^8.56.11",
+    "@types/eslint": "^9.6.0",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.14.11",
     "automd": "^0.3.8",
