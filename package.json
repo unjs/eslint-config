@@ -29,17 +29,17 @@
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-unicorn": "^53.0.0",
     "globals": "^15.8.0",
-    "typescript-eslint": "^7.17.0"
+    "typescript-eslint": "^7.18.0"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.2",
     "@types/eslint": "^8.56.11",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.14.12",
+    "@types/node": "^20.14.13",
     "automd": "^0.3.8",
     "changelogen": "^0.5.5",
     "eslint": "^9.8.0",
-    "eslint-typegen": "^0.2.4",
+    "eslint-typegen": "^0.3.0",
     "jiti": "^1.21.6",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
