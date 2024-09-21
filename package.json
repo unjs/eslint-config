@@ -25,7 +25,7 @@
     "typegen": "node ./scripts/typegen.mjs"
   },
   "dependencies": {
-    "@eslint/js": "^9.10.0",
+    "@eslint/js": "^9.11.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-unicorn": "^53.0.0",
     "globals": "^15.9.0",
@@ -37,8 +37,8 @@
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.16.5",
     "automd": "^0.3.8",
-    "changelogen": "^0.5.5",
-    "eslint": "^9.10.0",
+    "changelogen": "^0.5.7",
+    "eslint": "^9.11.0",
     "eslint-typegen": "^0.3.2",
     "jiti": "^1.21.6",
     "prettier": "^3.3.3",
@@ -49,5 +49,5 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "packageManager": "pnpm@9.10.0"
+  "packageManager": "pnpm@9.11.0"
 }
