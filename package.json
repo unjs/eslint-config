@@ -29,7 +29,7 @@
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-unicorn": "^53.0.0",
     "globals": "^15.9.0",
-    "typescript-eslint": "^7.18.0"
+    "typescript-eslint": "^8.7.0"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.4",
