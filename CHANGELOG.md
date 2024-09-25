@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.4.0
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.3.2...v0.4.0)
+
+### 🏡 Chore
+
+- ⚠️  Update dependencies ([ec5727e](https://github.com/unjs/eslint-config/commit/ec5727e))
+- Use eslint ts support with jiti ([0d531f8](https://github.com/unjs/eslint-config/commit/0d531f8))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Update dependencies ([ec5727e](https://github.com/unjs/eslint-config/commit/ec5727e))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.3.2
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.3.1...v0.3.2)
