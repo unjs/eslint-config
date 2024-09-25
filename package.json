@@ -17,30 +17,30 @@
   "scripts": {
     "build": "unbuild",
     "dev": "eslint-config-inspector",
-    "lint": "eslint . && prettier -c src",
-    "lint:fix": "eslint . --fix && prettier -w src",
+    "lint": "eslint --flag unstable_ts_config . && prettier -c src",
+    "lint:fix": "eslint --flag unstable_ts_config . --fix && prettier -w src",
     "prepack": "pnpm build",
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
     "test": "pnpm lint",
     "typegen": "node ./scripts/typegen.mjs"
   },
   "dependencies": {
-    "@eslint/js": "^9.11.0",
+    "@eslint/js": "^9.11.1",
     "eslint-plugin-markdown": "^5.1.0",
-    "eslint-plugin-unicorn": "^53.0.0",
+    "eslint-plugin-unicorn": "^55.0.0",
     "globals": "^15.9.0",
-    "typescript-eslint": "^7.18.0"
+    "typescript-eslint": "^8.7.0"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.4",
-    "@types/eslint": "^8.56.12",
+    "@types/eslint": "^9.6.1",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.16.5",
+    "@types/node": "^22.7.2",
     "automd": "^0.3.8",
     "changelogen": "^0.5.7",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "eslint-typegen": "^0.3.2",
-    "jiti": "^1.21.6",
+    "jiti": "^2.0.0",
     "prettier": "^3.3.3",
     "typescript": "^5.6.2",
     "unbuild": "^2.0.0"
