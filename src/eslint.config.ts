@@ -21,7 +21,7 @@ export interface TypedFlatConfig extends Omit<Linter.FlatConfig, "rules"> {
 export default function unjsPreset(
   config: MainConfig = {},
   ...userConfigs: TypedFlatConfig[]
-): Linter.FlatConfig[] {
+): Linter.Config[] {
   const rules: RuleOptions = {
     "unicorn/number-literal-case": 0,
     "unicorn/template-indent": 0,
