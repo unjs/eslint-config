@@ -88,6 +88,8 @@ export default function unjsPreset(
         "no-empty-pattern": 0,
         "no-redeclare": 0,
         "no-import-assign": 0,
+        "@typescript-eslint/no-require-imports": 0,
+        "@typescript-eslint/no-unused-expressions": 0,
         ...config.markdown?.rules,
       }) as any,
     },
