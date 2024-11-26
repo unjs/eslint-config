@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v0.4.2
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.4.1...v0.4.2)
+
+### 💅 Refactors
+
+- Use `Linter.Config` as return type ([2cce21a](https://github.com/unjs/eslint-config/commit/2cce21a))
+- Reflax markdown rules ([587c6a7](https://github.com/unjs/eslint-config/commit/587c6a7))
+
+### 🏡 Chore
+
+- Update deps ([c179c22](https://github.com/unjs/eslint-config/commit/c179c22))
+- **release:** V0.4.1 ([a8fb144](https://github.com/unjs/eslint-config/commit/a8fb144))
+- Update deps ([0431414](https://github.com/unjs/eslint-config/commit/0431414))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.4.1
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.4.0...v0.4.1)
