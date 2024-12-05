@@ -25,23 +25,23 @@
     "typegen": "node ./scripts/typegen.mjs"
   },
   "dependencies": {
-    "@eslint/js": "^9.15.0",
+    "@eslint/js": "^9.16.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-unicorn": "^56.0.1",
-    "globals": "^15.12.0",
-    "typescript-eslint": "^8.16.0"
+    "globals": "^15.13.0",
+    "typescript-eslint": "^8.17.0"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.6",
     "@types/eslint": "^9.6.1",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.10.0",
+    "@types/node": "^22.10.1",
     "automd": "^0.3.12",
     "changelogen": "^0.5.7",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "eslint-typegen": "^0.3.2",
-    "jiti": "^2.4.0",
-    "prettier": "^3.4.1",
+    "jiti": "^2.4.1",
+    "prettier": "^3.4.2",
     "typescript": "^5.7.2",
     "unbuild": "^2.0.0"
   },
@@ -49,5 +49,5 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "packageManager": "pnpm@9.14.2"
+  "packageManager": "pnpm@9.14.4"
 }
