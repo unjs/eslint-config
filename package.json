@@ -39,7 +39,7 @@
     "automd": "^0.3.12",
     "changelogen": "^0.5.7",
     "eslint": "^9.17.0",
-    "eslint-typegen": "^0.3.2",
+    "eslint-typegen": "^1.0.0",
     "jiti": "^2.4.2",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2",
