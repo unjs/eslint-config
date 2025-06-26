@@ -13,5 +13,8 @@ export default defineBuildConfig({
       });
       await fs.writeFile("src/types.gen.d.ts", dts);
     },
+    async "build:done"() {
+      await fs.rm("dist/eslint.config.d.ts");
+    },
   },
 });
