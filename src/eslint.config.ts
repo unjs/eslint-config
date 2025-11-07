@@ -52,7 +52,7 @@ export default function unjsPreset(
     // https://typescript-eslint.io/
     ...(tseslint.configs.recommended as Linter.Config[]),
     // https://github.com/sindresorhus/eslint-plugin-unicorn
-    eslintPluginUnicorn.configs["flat/recommended"] as Linter.Config,
+    eslintPluginUnicorn.configs.recommended as Linter.Config,
 
     // Preset overrides
     { rules: rules as Linter.RulesRecord },
