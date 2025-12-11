@@ -1,26 +1,32 @@
-import eslint from "@eslint/js";
+import js from "@eslint/js";
 import tseslint from "typescript-eslint";
-// @ts-ignore
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
-// @ts-ignore
-import markdown from "eslint-plugin-markdown";
-import type { Linter } from "eslint";
-import type { RuleOptions } from "./types.gen";
+import markdown from "@eslint/markdown";
+import type { ESLint, Linter } from "eslint";
+import type { RuleOptions as GenRuleOptions } from "./types.gen";
 import globals from "globals";
+
+type RuleOptions = GenRuleOptions & Linter.RulesRecord;
 
 export interface MainConfig {
   rules?: RuleOptions;
-  markdown?: false | { rules: RuleOptions };
+  markdown?:
+    | false
+    | {
+        rules?: RuleOptions;
+        language?: "markdown/commonmark" | "markdown/gfm";
+      };
+  plugins?: Record<string, ESLint.Plugin>;
   ignores?: string[];
 }
 
-export interface TypedFlatConfig extends Omit<Linter.FlatConfig, "rules"> {
+export interface TypedConfig extends Omit<Linter.Config, "rules"> {
   rules?: RuleOptions;
 }
 
 export default function unjsPreset(
   config: MainConfig = {},
-  ...userConfigs: TypedFlatConfig[]
+  ...userConfigs: TypedConfig[]
 ): Linter.Config[] {
   const rules: RuleOptions = {
     "unicorn/number-literal-case": 0,
@@ -46,16 +52,22 @@ export default function unjsPreset(
     ...config.rules,
   };
 
-  const configs: Linter.FlatConfig[] = [
+  const configs: Linter.Config[] = [
     // https://eslint.org/docs/latest/rules/
-    eslint.configs.recommended,
+    {
+      files: ["**/*.js", "**/*.mjs"],
+      ...js.configs.recommended,
+    },
     // https://typescript-eslint.io/
-    ...(tseslint.configs.recommended as Linter.FlatConfig[]),
+    ...tseslint.configs.recommended,
     // https://github.com/sindresorhus/eslint-plugin-unicorn
-    eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
+    eslintPluginUnicorn.configs.recommended,
 
     // Preset overrides
-    { rules: rules as Linter.RulesRecord },
+    {
+      ...(config.plugins ? { plugins: config.plugins } : {}),
+      rules,
+    },
     {
       languageOptions: {
         globals: Object.fromEntries(
@@ -71,15 +83,16 @@ export default function unjsPreset(
     { ignores: ["dist", "coverage", ...(config.ignores || [])] },
 
     // Markdown
-    // https://www.npmjs.com/package/eslint-plugin-markdown
-    config.markdown !== false && { plugins: { markdown } },
+    // https://www.npmjs.com/package/@eslint/markdown
     config.markdown !== false && {
-      files: ["*.md"],
+      files: ["**/*.md"],
       processor: "markdown/markdown",
+      plugins: { markdown },
+      language: config.markdown?.language || "markdown/commonmark",
     },
     config.markdown !== false && {
       files: ["**/*.md/*.js", "**/*.md/*.ts"],
-      rules: (<RuleOptions>{
+      rules: <GenRuleOptions>{
         "unicorn/filename-case": 0,
         "no-undef": 0,
         "no-unused-expressions": 0,
@@ -91,12 +104,12 @@ export default function unjsPreset(
         "@typescript-eslint/no-require-imports": 0,
         "@typescript-eslint/no-unused-expressions": 0,
         ...config.markdown?.rules,
-      }) as any,
+      },
     },
 
     // User overrides
-    ...(userConfigs as Linter.FlatConfig[]),
-  ].filter(Boolean) as Linter.FlatConfig[];
+    ...(userConfigs as Linter.Config[]),
+  ].filter(Boolean) as Linter.Config[];
 
   return configs;
 }
