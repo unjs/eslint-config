@@ -20,7 +20,7 @@
     "prepack": "pnpm build",
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
     "test": "pnpm lint",
-    "typegen": "node ./scripts/typegen.mjs"
+    "typegen": "pnpm build"
   },
   "dependencies": {
     "@eslint/js": "^9.32.0",
