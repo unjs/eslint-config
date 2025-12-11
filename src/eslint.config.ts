@@ -2,8 +2,7 @@ import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 // @ts-ignore
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
-// @ts-ignore
-import markdown from "eslint-plugin-markdown";
+import markdown from "@eslint/markdown";
 import type { Linter } from "eslint";
 import type { RuleOptions } from "./types.gen";
 import globals from "globals";
@@ -71,7 +70,7 @@ export default function unjsPreset(
     { ignores: ["dist", "coverage", ...(config.ignores || [])] },
 
     // Markdown
-    // https://www.npmjs.com/package/eslint-plugin-markdown
+    // https://www.npmjs.com/package/@eslint/markdown
     config.markdown !== false && { plugins: { markdown } },
     config.markdown !== false && {
       files: ["*.md"],
