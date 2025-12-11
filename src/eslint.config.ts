@@ -1,6 +1,5 @@
-import eslint from "@eslint/js";
+import js from "@eslint/js";
 import tseslint from "typescript-eslint";
-// @ts-ignore
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import markdown from "@eslint/markdown";
 import type { Linter } from "eslint";
@@ -9,7 +8,9 @@ import globals from "globals";
 
 export interface MainConfig {
   rules?: RuleOptions;
-  markdown?: false | { rules: RuleOptions };
+  markdown?:
+    | false
+    | { rules: RuleOptions; language?: "markdown/commonmark" | "markdown/gfm" };
   ignores?: string[];
 }
 
@@ -47,11 +48,14 @@ export default function unjsPreset(
 
   const configs: Linter.Config[] = [
     // https://eslint.org/docs/latest/rules/
-    eslint.configs.recommended,
+    {
+      files: ["**/*.js", "**/*.mjs"],
+      ...js.configs.recommended,
+    },
     // https://typescript-eslint.io/
-    ...(tseslint.configs.recommended as Linter.Config[]),
+    ...tseslint.configs.recommended,
     // https://github.com/sindresorhus/eslint-plugin-unicorn
-    eslintPluginUnicorn.configs["recommended"] as Linter.Config,
+    eslintPluginUnicorn.configs.recommended,
 
     // Preset overrides
     { rules: rules as Linter.RulesRecord },
@@ -71,10 +75,11 @@ export default function unjsPreset(
 
     // Markdown
     // https://www.npmjs.com/package/@eslint/markdown
-    config.markdown !== false && { plugins: { markdown } },
     config.markdown !== false && {
-      files: ["*.md"],
+      files: ["**/*.md"],
       processor: "markdown/markdown",
+      plugins: { markdown },
+      language: config.markdown?.language || "markdown/commonmark",
     },
     config.markdown !== false && {
       files: ["**/*.md/*.js", "**/*.md/*.ts"],
