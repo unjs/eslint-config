@@ -13,13 +13,13 @@ export interface MainConfig {
   ignores?: string[];
 }
 
-export interface TypedFlatConfig extends Omit<Linter.FlatConfig, "rules"> {
+export interface TypedConfig extends Omit<Linter.Config, "rules"> {
   rules?: RuleOptions;
 }
 
 export default function unjsPreset(
   config: MainConfig = {},
-  ...userConfigs: TypedFlatConfig[]
+  ...userConfigs: TypedConfig[]
 ): Linter.Config[] {
   const rules: RuleOptions = {
     "unicorn/number-literal-case": 0,
@@ -45,13 +45,13 @@ export default function unjsPreset(
     ...config.rules,
   };
 
-  const configs: Linter.FlatConfig[] = [
+  const configs: Linter.Config[] = [
     // https://eslint.org/docs/latest/rules/
     eslint.configs.recommended,
     // https://typescript-eslint.io/
-    ...(tseslint.configs.recommended as Linter.FlatConfig[]),
+    ...(tseslint.configs.recommended as Linter.Config[]),
     // https://github.com/sindresorhus/eslint-plugin-unicorn
-    eslintPluginUnicorn.configs["flat/recommended"] as Linter.FlatConfig,
+    eslintPluginUnicorn.configs["recommended"] as Linter.Config,
 
     // Preset overrides
     { rules: rules as Linter.RulesRecord },
@@ -94,8 +94,8 @@ export default function unjsPreset(
     },
 
     // User overrides
-    ...(userConfigs as Linter.FlatConfig[]),
-  ].filter(Boolean) as Linter.FlatConfig[];
+    ...(userConfigs as Linter.Config[]),
+  ].filter(Boolean) as Linter.Config[];
 
   return configs;
 }
