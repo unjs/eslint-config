@@ -2,15 +2,21 @@ import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import markdown from "@eslint/markdown";
-import type { Linter } from "eslint";
-import type { RuleOptions } from "./types.gen";
+import type { ESLint, Linter } from "eslint";
+import type { RuleOptions as GenRuleOptions } from "./types.gen";
 import globals from "globals";
+
+type RuleOptions = GenRuleOptions & Linter.RulesRecord;
 
 export interface MainConfig {
   rules?: RuleOptions;
   markdown?:
     | false
-    | { rules: RuleOptions; language?: "markdown/commonmark" | "markdown/gfm" };
+    | {
+        rules?: RuleOptions;
+        language?: "markdown/commonmark" | "markdown/gfm";
+      };
+  plugins?: Record<string, ESLint.Plugin>;
   ignores?: string[];
 }
 
@@ -58,7 +64,10 @@ export default function unjsPreset(
     eslintPluginUnicorn.configs.recommended,
 
     // Preset overrides
-    { rules: rules as Linter.RulesRecord },
+    {
+      ...(config.plugins ? { plugins: config.plugins } : {}),
+      rules,
+    },
     {
       languageOptions: {
         globals: Object.fromEntries(
@@ -83,7 +92,7 @@ export default function unjsPreset(
     },
     config.markdown !== false && {
       files: ["**/*.md/*.js", "**/*.md/*.ts"],
-      rules: (<RuleOptions>{
+      rules: <GenRuleOptions>{
         "unicorn/filename-case": 0,
         "no-undef": 0,
         "no-unused-expressions": 0,
@@ -95,7 +104,7 @@ export default function unjsPreset(
         "@typescript-eslint/no-require-imports": 0,
         "@typescript-eslint/no-unused-expressions": 0,
         ...config.markdown?.rules,
-      }) as any,
+      },
     },
 
     // User overrides
