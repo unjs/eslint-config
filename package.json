@@ -46,5 +46,8 @@
     "eslint": "*",
     "typescript": "*"
   },
+  "engines": {
+    "node": "22"
+  },
   "packageManager": "pnpm@10.25.0"
 }
