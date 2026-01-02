@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v0.6.1
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.6.0...v0.6.1)
+
+### 💅 Refactors
+
+- Migrate to `@eslint/markdown` ([2f92a53](https://github.com/unjs/eslint-config/commit/2f92a53))
+- Update default rules ([84cdbad](https://github.com/unjs/eslint-config/commit/84cdbad))
+
+### 📦 Build
+
+- Migrate to obuild ([8f36bf1](https://github.com/unjs/eslint-config/commit/8f36bf1))
+
+### 🏡 Chore
+
+- Update deps ([4347a4f](https://github.com/unjs/eslint-config/commit/4347a4f))
+- Update globals to v17 ([4f168b4](https://github.com/unjs/eslint-config/commit/4f168b4))
+- Update unicorn to 62 ([e737dd7](https://github.com/unjs/eslint-config/commit/e737dd7))
+- **release:** V0.6.0 ([b683294](https://github.com/unjs/eslint-config/commit/b683294))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](https://github.com/pi0))
+
 ## v0.6.0
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.5.0...v0.6.0)
