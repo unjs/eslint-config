@@ -1,9 +1,10 @@
-import { defineBuildConfig } from "unbuild";
+import { defineBuildConfig } from "obuild/config";
 import fs from "node:fs/promises";
 
 export default defineBuildConfig({
+  entries: ["src/eslint.config.ts"],
   hooks: {
-    async "build:before"() {
+    async start() {
       const unjsPreset = await import("./src/eslint.config").then(
         (m) => m.default,
       );
@@ -12,9 +13,6 @@ export default defineBuildConfig({
         includeAugmentation: false,
       });
       await fs.writeFile("src/types.gen.d.ts", dts);
-    },
-    async "build:done"() {
-      await fs.rm("dist/eslint.config.d.ts");
     },
   },
 });
