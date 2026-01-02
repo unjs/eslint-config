@@ -40,6 +40,7 @@ export default function unjsPreset(
     "unicorn/no-anonymous-default-export": 0,
     "unicorn/no-array-push-push": 0,
     "unicorn/no-array-sort": 0,
+    "unicorn/no-array-reverse": 0,
     "unicorn/no-await-expression-member": 0,
     "unicorn/no-immediate-mutation": 0,
     "unicorn/no-null": 0,
