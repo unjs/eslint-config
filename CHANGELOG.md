@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.6.2
+
+[compare changes](https://github.com/unjs/eslint-config/compare/v0.6.1...v0.6.2)
+
+### 🩹 Fixes
+
+- Disable array immutation rules for now ([3cde73a](https://github.com/unjs/eslint-config/commit/3cde73a))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](https://github.com/pi0))
+
 ## v0.6.1
 
 [compare changes](https://github.com/unjs/eslint-config/compare/v0.6.0...v0.6.1)
