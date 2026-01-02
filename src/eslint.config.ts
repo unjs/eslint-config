@@ -1,9 +1,7 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
-// @ts-ignore
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
-// @ts-ignore
-import markdown from "eslint-plugin-markdown";
+import markdown from "@eslint/markdown";
 import type { Linter } from "eslint";
 import type { RuleOptions } from "./types.gen";
 import globals from "globals";
