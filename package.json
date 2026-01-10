@@ -27,17 +27,17 @@
     "@eslint/markdown": "^7.5.1",
     "eslint-plugin-unicorn": "^62.0.0",
     "globals": "^17.0.0",
-    "typescript-eslint": "^8.51.0"
+    "typescript-eslint": "^8.52.0"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^1.4.2",
     "@types/eslint": "^9.6.1",
-    "@types/node": "^25.0.3",
+    "@types/node": "^25.0.6",
     "automd": "^0.4.2",
     "changelogen": "^0.6.2",
     "eslint": "^9.39.2",
     "eslint-typegen": "^2.3.0",
-    "obuild": "^0.4.10",
+    "obuild": "^0.4.14",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3"
   },
@@ -45,5 +45,5 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "packageManager": "pnpm@10.27.0"
+  "packageManager": "pnpm@10.28.0"
 }
