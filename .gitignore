@@ -2,3 +2,4 @@ dist
 node_modules
 *.log*
 src/types.gen.d.ts
+.oxlintrc.json

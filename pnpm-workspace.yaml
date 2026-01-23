@@ -1,3 +1,6 @@
 ignoredBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
+
+patchedDependencies:
+  '@oxlint/migrate': patches/@oxlint__migrate.patch
