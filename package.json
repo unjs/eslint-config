@@ -41,6 +41,7 @@
     "eslint": "^9.39.2",
     "eslint-typegen": "^2.3.0",
     "obuild": "^0.4.20",
+    "oxfmt": "^0.26.0",
     "oxlint": "^1.41.0",
     "prettier": "^3.8.1",
     "tinyexec": "^1.0.2",

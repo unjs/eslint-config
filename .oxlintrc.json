@@ -1,8 +1,5 @@
 {
-  "plugins": [
-    "typescript",
-    "unicorn"
-  ],
+  "plugins": ["typescript", "unicorn"],
   "categories": {
     "correctness": "off"
   },
@@ -193,19 +190,10 @@
     "unicorn/text-encoding-identifier-case": "error",
     "unicorn/throw-new-error": "error"
   },
-  "ignorePatterns": [
-    "dist",
-    "coverage",
-    "**/types.gen.d.ts"
-  ],
+  "ignorePatterns": ["dist", "coverage", "**/types.gen.d.ts"],
   "overrides": [
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.mts",
-        "**/*.cts"
-      ],
+      "files": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
       "rules": {
         "constructor-super": "off",
         "no-class-assign": "off",
@@ -227,10 +215,7 @@
       }
     },
     {
-      "files": [
-        "**/*.md/*.js",
-        "**/*.md/*.ts"
-      ],
+      "files": ["**/*.md/*.js", "**/*.md/*.ts"],
       "rules": {
         "no-empty-pattern": "off",
         "no-redeclare": "off",
