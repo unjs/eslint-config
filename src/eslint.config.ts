@@ -3,7 +3,7 @@ import tseslint from "typescript-eslint";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import markdown from "@eslint/markdown";
 import type { Linter } from "eslint";
-import type { RuleOptions } from "./types.gen";
+import type { RuleOptions } from "./types.gen.ts";
 import globals from "globals";
 
 export interface MainConfig {
