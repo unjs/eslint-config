@@ -58,7 +58,6 @@ export default function unjsPreset(
     ...config.rules,
   };
 
-  console.log(eslint)
   const configs: Linter.Config[] = [
     // https://eslint.org/docs/latest/rules/
     eslint.configs.recommended,

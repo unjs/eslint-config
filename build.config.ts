@@ -19,14 +19,11 @@ export default defineBuildConfig({
     async end() {
       await rm(".oxlintrc.json", { force: true });
       await x("node", ["node_modules/@oxlint/migrate/dist/bin/oxlint-migrate.mjs"])
-
       const config = JSON.parse(await readFile(".oxlintrc.json", "utf8"));
-
       delete config.$schema;
       delete config.globals;
-
-      await writeFile("dist/oxlintrc.json", JSON.stringify(config, null, 2));
-      console.log("Generated dist/oxlintrc.json");
+      await writeFile(".oxlintrc.json", JSON.stringify(config, null, 2));
+      console.log("Generated .oxlintrc.json");
     }
   },
 });

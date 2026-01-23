@@ -6,12 +6,12 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": "./dist/eslint.config.mjs",
-    "./dist/oxlintrc.json": "./dist/oxlintrc.json"
+    ".": "./dist/eslint.config.mjs"
   },
   "types": "dist/eslint.config.d.mts",
   "files": [
-    "dist"
+    "dist",
+    ".oxlintrc.json"
   ],
   "scripts": {
     "build": "obuild",
