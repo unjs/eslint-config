@@ -5,7 +5,7 @@ export default defineBuildConfig({
   entries: ["src/eslint.config.ts"],
   hooks: {
     async start() {
-      const unjsPreset = await import("./src/eslint.config").then(
+      const unjsPreset = await import("./src/eslint.config.ts").then(
         (m) => m.default,
       );
       const { flatConfigsToRulesDTS } = await import("eslint-typegen/core");
@@ -13,6 +13,7 @@ export default defineBuildConfig({
         includeAugmentation: false,
       });
       await fs.writeFile("src/types.gen.d.ts", dts);
+      console.log("Generated src/types.gen.d.ts");
     },
   },
 });

@@ -38,7 +38,7 @@
     "changelogen": "^0.6.2",
     "eslint": "^9.39.2",
     "eslint-typegen": "^2.3.0",
-    "obuild": "^0.4.19",
+    "obuild": "^0.4.20",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3"
   },

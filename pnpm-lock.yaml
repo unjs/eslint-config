@@ -49,8 +49,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0(eslint@9.39.2(jiti@2.6.1))
       obuild:
-        specifier: ^0.4.19
-        version: 0.4.19(@typescript/native-preview@7.0.0-dev.20260122.4)(typescript@5.9.3)
+        specifier: ^0.4.20
+        version: 0.4.20(@typescript/native-preview@7.0.0-dev.20260122.4)(typescript@5.9.3)
       prettier:
         specifier: ^3.8.1
         version: 3.8.1
@@ -1298,8 +1298,8 @@ packages:
   obug@2.1.1:
     resolution: {integrity: sha512-uTqF9MuPraAQ+IsnPf366RG4cP9RtUi7MLO1N3KEc+wb0a6yKpeL0lmk2IB1jY5KHPAlTc6T/JRdC/YqxHNwkQ==}
 
-  obuild@0.4.19:
-    resolution: {integrity: sha512-cp4SGTsZUnnfV7XvWdwDncoesCTw4OvWgBL5zEuq4RMvjK2ZFM9JroVdPkCV0z5bUWi8lp/7bspQgT9Gdqww7Q==}
+  obuild@0.4.20:
+    resolution: {integrity: sha512-9xOVCwJkm6Xane61y2AIQWKAqhDLRz5FosS4eLNYR+hzTQAnslrlYBxH6iXTZWRfc5a+8kVXa9R7LZxHHq+mzg==}
     hasBin: true
 
   ofetch@1.5.1:
@@ -2937,7 +2937,7 @@ snapshots:
 
   obug@2.1.1: {}
 
-  obuild@0.4.19(@typescript/native-preview@7.0.0-dev.20260122.4)(typescript@5.9.3):
+  obuild@0.4.20(@typescript/native-preview@7.0.0-dev.20260122.4)(typescript@5.9.3):
     dependencies:
       c12: 3.3.3
       consola: 3.4.2
