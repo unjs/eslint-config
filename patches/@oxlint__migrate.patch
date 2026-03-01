@@ -1,0 +1,13 @@
+diff --git a/dist/bin/oxlint-migrate.mjs b/dist/bin/oxlint-migrate.mjs
+index 3d16c09a3ff05973a744c5bb6f3d53337023bd08..23e3bae39cc9896ba335c916a6677e3aadc9bc8f 100755
+--- a/dist/bin/oxlint-migrate.mjs
++++ b/dist/bin/oxlint-migrate.mjs
+@@ -31,7 +31,7 @@ const loadESLintConfig = async (filePath) => {
+ 	if (filePath.endsWith(".ts") || filePath.endsWith(".mts") || filePath.endsWith(".cts")) {
+ 		const { createJiti } = await import("jiti");
+ 		return createJiti(filePath, {
+-			interopDefault: false,
++			// interopDefault: false,
+ 			moduleCache: false
+ 		}).import(url);
+ 	}

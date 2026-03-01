@@ -10,7 +10,8 @@
   },
   "types": "dist/eslint.config.d.mts",
   "files": [
-    "dist"
+    "dist",
+    ".oxlintrc.json"
   ],
   "scripts": {
     "build": "obuild",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@eslint/config-inspector": "^1.4.2",
+    "@oxlint/migrate": "^1.41.0",
     "@types/eslint": "^9.6.1",
     "@types/node": "^25.0.10",
     "@typescript/native-preview": "7.0.0-dev.20260122.4",
@@ -39,7 +41,10 @@
     "eslint": "^9.39.2",
     "eslint-typegen": "^2.3.0",
     "obuild": "^0.4.20",
+    "oxfmt": "^0.26.0",
+    "oxlint": "^1.41.0",
     "prettier": "^3.8.1",
+    "tinyexec": "^1.0.2",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
