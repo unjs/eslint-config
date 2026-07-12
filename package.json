@@ -30,7 +30,7 @@
     "typescript-eslint": "^8.53.1"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^1.4.2",
+    "@eslint/config-inspector": "^3.0.4",
     "@types/eslint": "^9.6.1",
     "@types/node": "^25.0.10",
     "@typescript/native-preview": "7.0.0-dev.20260122.4",
