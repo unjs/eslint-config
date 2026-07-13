@@ -15,32 +15,32 @@
   "scripts": {
     "build": "obuild",
     "dev": "eslint-config-inspector",
-    "lint": "eslint . && prettier -c src",
-    "format": "eslint . --fix && prettier -w src",
+    "lint": "eslint --config eslint.config.ts . && prettier -c src",
+    "format": "eslint --config eslint.config.ts . --fix && prettier -w src",
     "prepack": "pnpm build",
     "release": "pnpm test && pnpm build && changelogen --release && npm publish && git push --follow-tags",
     "test": "pnpm lint",
     "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
-    "@eslint/js": "^9.39.2",
-    "@eslint/markdown": "^7.5.1",
-    "eslint-plugin-unicorn": "^62.0.0",
-    "globals": "^17.1.0",
-    "typescript-eslint": "^8.53.1"
+    "@eslint/js": "^10.0.1",
+    "@eslint/markdown": "^8.0.3",
+    "eslint-plugin-unicorn": "^71.1.0",
+    "globals": "^17.7.0",
+    "typescript-eslint": "^8.63.0"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^1.4.2",
+    "@eslint/config-inspector": "^3.0.4",
     "@types/eslint": "^9.6.1",
-    "@types/node": "^25.0.10",
-    "@typescript/native-preview": "7.0.0-dev.20260122.4",
-    "automd": "^0.4.2",
+    "@types/node": "^26.1.1",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "automd": "^0.4.3",
     "changelogen": "^0.6.2",
-    "eslint": "^9.39.2",
-    "eslint-typegen": "^2.3.0",
-    "obuild": "^0.4.20",
-    "prettier": "^3.8.1",
-    "typescript": "^5.9.3"
+    "eslint": "^10.7.0",
+    "eslint-typegen": "^2.3.1",
+    "obuild": "^0.4.38",
+    "prettier": "^3.9.5",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "eslint": "*",
