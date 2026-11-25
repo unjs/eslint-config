@@ -40,7 +40,7 @@
     "eslint-typegen": "^2.3.1",
     "obuild": "^0.4.38",
     "prettier": "^3.9.5",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
   "peerDependencies": {
     "eslint": "*",
